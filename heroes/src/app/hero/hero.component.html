@@ -1,0 +1,15 @@
+<h2>Marvel SuperHeroes</h2>
+
+<div *ngFor="let hero of heroes; index as heroId">
+  <h3>
+    {{hero.name}}
+  </h3>
+   <a> <img src= "{{hero.imageSrc}}" >
+   </a>
+   <p *ngIf="hero.descriptions">
+    Description: {{ hero.descriptions }}
+  </p>
+  <a [routerLink]="['/heroes', heroId]">Teams</a>
+
+</div>
+
